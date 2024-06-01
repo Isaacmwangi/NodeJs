@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20231012/pngtree-aesthetic-sky-fluffy-white-clouds-on-a-blue-background-image_13642352.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+.header {
+    margin-top: 100px;
+}
+      input {
+        background-color: white;
+        height: 30px;
+        border-radius: 7%;
+        margin-bottom: 10px;
+      }
+
+      .weather {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .weatherContainer,
+      .currentWeather {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 10px 0;
+      }
+
+      .forecast {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .forecastItem {
+        flex: 1;
+        min-width: 150px;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Weather App</h1>
+      <input
+        type="text"
+        id="location"
+        placeholder="Enter the Location"
+        onchange="fetchWeather()"
+      />
+    </div>
+    <div class="weather" id="weather"></div>
+
+    <script src="./weather.js"></script>
+  </body>
+</html>
