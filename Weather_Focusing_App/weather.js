@@ -1,4 +1,4 @@
-const apiKey = '92ade7b938e9862069d86bbeb202b57a'; //this my API key
+const apiKey = ''; //this my API key
 const defaultLocation = 'Nyahururu'; //set default location to be nyahururu
 
 const fetchWeather = async () => {
